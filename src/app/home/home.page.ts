@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {LoadingController} from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,28 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private loadingCtrl: LoadingController){
+  }
+
+  async showLaoding() {
+   let loading = await this.loadingCtrl.create({
+     message: "Please Wait...",
+     duration: 2000,
+     showBackdrop:false,
+     spinner: "lines"
+   });
+
+
+      loading.present();
+
+      setTimeout(() =>{
+        loading.dismiss();
+      }, 2000)
+    }
 
 }
+
+
+
+
+

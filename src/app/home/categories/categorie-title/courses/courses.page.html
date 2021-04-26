@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="success" class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/tabs/categorie-title/" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{showCategorie.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size=12 sizesm=8 offsetsm=2>
+        <ion-card>
+          <ion-card-header>
+          </ion-card-header>
+            <ion-img [src]="showCategorie.imageUrl"></ion-img>
+            <ion-card-content>
+              <p>{{showCategorie.description}}</p>
+            </ion-card-content>
+        </ion-card>
+
+        <ion-list>
+          <ion-item routerLink="./{{chap.id}} " detail *ngFor="let chap of showCategorie.chapters">
+            <ion-label class="ion-text-center">
+            <h1>Chapitre: {{chap.title}}</h1>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+

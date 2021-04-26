@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar color="success" class="ion-text-center">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home" ></ion-back-button>
+      </ion-buttons>
+
+      <ion-buttons slot="end" (click)='delete()'>
+        <ion-icon name="reload-circle-sharp" class="reload"></ion-icon>
+      </ion-buttons>
+
+    <ion-title>Stats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label class="ion-text-center" id="stats">
+      <h1>Viewed categories: {{categorieViewed.length}} </h1>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="ion-text-center" id="stats1">
+      <h1>Viewed courses: {{courseViewed.length}}</h1>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="ion-text-center" id="stats1">
+      <h1>Viewed chapters: {{chapterViewed.length}} </h1>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="success" class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/tabs/categorie-title/courses" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Chapter </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+        <ion-card>
+          <ion-card-header>
+          </ion-card-header>
+            <ion-img [src]="showCategorie.imageUrl"></ion-img>
+            <ion-card-content>
+              <p>{{showCategorie.description}}</p>
+            </ion-card-content>
+        </ion-card>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="success" class="ion-text-center">
+    <ion-title>New Note</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/note" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="nN" padding>
+  <form [formGroup]="saveNote" >
+    <div class="TitleInput">
+    <ion-item>
+      <ion-label position="floating" class="ion-text-center">Title</ion-label>
+      <ion-input type="text" formControlName="titleInput" ></ion-input>
+    </ion-item>
+  </div>
+  <div class="ContentInput">
+    <ion-item>
+      <ion-label position="floating" class="ion-text-center">Content</ion-label>
+      <ion-input type="text" formControlName="contentInput" ></ion-input>
+    </ion-item>
+  </div>
+
+    <ion-button expand="block" padding id="saveDesign" class="ion-margin-top" (click)="addNote()" >
+       <ion-icon name="save-outline" slot="icon-only" ></ion-icon>SAVE
+    </ion-button>
+
+  </form>
+</ion-content>
